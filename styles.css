@@ -1,241 +1,110 @@
-body {
-    background-color: cornflowerblue;
+#slider {
+    position: relative;
+    text-align: center;
+    top: 10px;
 }
-.carousel-container {
-    margin: 20px auto;
-    max-width: 100%;
-    height: 640px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin-bottom: 0;
-    
-    margin-left: 20px;
-    margin-right: 20px;
-    border-radius: 15px;
-}
-.mySlides {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: hidden;
+#slider {
     margin: 0 auto;
-    min-height: 640px;
-    width: 600%;
-    transition: all 1s;
-    border-radius: 15px;
 }
-.carousel {
+#slides article {
+    width: 20%;
+    float: left;
+}
+/* общий размер блока с изобр. */
+#slides .image {
+    width: 50%;
+    line-height: 0;
+}
+/* скрыть все, что за пределами */
+#overflow {
+    width: 100%;
     overflow: hidden;
-    max-width: 100vw;
-    margin-left: 20px;
-    margin-right: 20px;
-    border-radius: 15px;
 }
-.about__circle {
-    display: flex;
-    flex-direction: row;
-    width: 280px;
-    height: 40px;
-    justify-content: center;
-    position: absolute;
-    top: 700px;
-    right: 40px;
+article img {
+    width: 100%;
 }
-.about__circle ul {
-    width: 280px;
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    gap: 25px;
-    padding: 0;
-    margin: 0;
+#desktop:checked ~ #slider {
+    max-width: 960px;
 }
-.about__circle ul li {
-    width: 15px;
-    height: 15px;
-    border: 5px solid rgb(2, 47, 131);
-    border-radius: 50%;
-    margin: 5px;
-    background: rgb(2, 47, 131)00;
+#switch1:checked ~ #controls label:nth-child(5),
+#switch2:checked ~ #controls label:nth-child(1),
+#switch3:checked ~ #controls label:nth-child(2),
+#switch4:checked ~ #controls label:nth-child(3),
+#switch5:checked ~ #controls label:nth-child(4) {
+    background: url('back_arrow_5821.png') no-repeat;
+    float: left;
+    margin: 0 0 0 -84px;
+    display: block;
+    height: 68px;
+    width: 68px;
+}
+#switch1:checked ~ #controls label:nth-child(2),
+#switch2:checked ~ #controls label:nth-child(3),
+#switch3:checked ~ #controls label:nth-child(4),
+#switch4:checked ~ #controls label:nth-child(5),
+#switch5:checked ~ #controls label:nth-child(1) {
+    background: url('forwardarrow_haciaadelante_4836.png') no-repeat;
+    float: right;
+    margin: 0 -84px 0 0 ;
+    display: block;
+    height: 68px;
+    width: 68px;
+}
+label, a {
     cursor: pointer;
 }
-.about__circle ul li.dot {
-    background: cornflowerblue;
-    border-color: 25px solid rgb(3, 53, 146);
-}
-.about__circle ul li:active {
-    background-color: cornflowerblue;
-    border-color: 25px solid rgb(3, 52, 143);
-}
-.about__circle ul li:hover {
-    background-color: cornflowerblue;
-    transition: 0.5s;
-}
-.about__circle ul li.dot {
-    background: cornflowerblue;
-    border-color: 25px solid rgb(2, 47, 131);
-}
-.about__photo {
-    width: 100%;
-    height: 640px;
-    border-radius: 15px;
-    justify-content: center;
-}
-.about__photo img {
-    width: 100%;
-    border-radius: 15px;
-    justify-content: center;
-    position: relative;
-}
-p {
-    margin: 0;
-}
-.mySlides-text {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: hidden;
-    width: 600%;
-    height: 50px;
-    margin-top: 30px;
-}
-.carousel-container-text {
-    width: 100%;
-    height: auto;
-
-}
-.carousel-text-1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    position: absolute;
-    top: 670px;
-    left: 50px;
-    z-index: 9999;
-    color: #000;
-    display: inline-block;
-}
-.transform {
-transform: translateX(-100%)
-}
-.carousel-text-2 {
-    position: absolute;
-    top: 680px;
-}
-.active {
-    background-color: cornflowerblue;
-    border-color: 25px solid rgb(2, 47, 131);
-}
-.carousel-container-1 {
+.all input {
     display: none;
 }
-
-
-
-@media (max-width: 1224px) {
-        .carousel-container {
-                height: 740px;
-                        }
-        }
-
-
-@media (max-width: 1124px) {
-    .carousel-container {
-        height: 640px;
-                }
+#switch1:checked ~ #slides .image {
+    margin-left: 0;
 }
-
-
-
-@media (max-width: 1024px) {
-        .carousel-container {
-height: 640px;
-        }
-    }
-
-
-
-
-  /* slider 1024 */
-@media (max-width: 924px) {
-    .carousel-container {
-        display: none;
-        border-radius: 15px;
-    }
-    .carousel-container-1 {
-      margin: 20px auto;
-      width: 100vw;
-      height: 440px;
-      display: flex;
-      border-radius: 15px;
-    }
-    .mySlides-1 {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow: hidden;
-        margin: 0 auto;
-        margin-top: 20px;
-        max-height: 440px;
-        width: 500%;
-        transition: all 1s;
-        border-radius: 15px;
-        }
-    .carousel-1 {
-      overflow: hidden;
-      max-width: 450px;
-      justify-content: center;
-      margin: auto;
-      border-radius: 15px;
-    }
-    .about__circle-1 {
-        width: 280px;
-        height: 40px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin: 20px 0 35px 0;
-      position: absolute;
-      top: 423px;
-      left: 300px;
-    }
-    .about__circle-1 ul {
-        width: 280px;
-      display: flex;
-      list-style: none;
-      justify-content: center;
-      gap: 15px;
-      padding: 0;
-      margin: 0;
-    }
-    .about__circle-1 ul li {
-      width: 15px;
-      height: 15px;
-      border: 5px solid rgb(2, 47, 131);
-      border-radius: 50%;
-      margin: 5px;
-      background: rgb(2, 47, 131);
-      cursor: pointer;
-    }
-    .about__circle-1 ul li:active {
-        background-color: cornflowerblue;
-        border-color: 25px solid rgb(5, 88, 241);
-    }
-    .about__circle-1 ul li:hover {
-        background-color: cornflowerblue;
-    }
-    .about__circle-1 ul li.dot-1 {
-        background: cornflowerblue;
-        border-color: 25px solid rgb(5, 88, 241);
-      }
-    .about__photo-1 {
-        width: 100%;
-        height: 300px;
-        border-radius: 15px;
-    }
-    .about__photo-1 img {
-        width: 100%;
-        border-radius: 15px;
-    }
-    .active {
-    background-color: #BB945F;
-    }
+#switch2:checked ~ #slides .image {
+    margin-left: 100%;
+}
+#switch3.image ~ #slides .image {
+    margin-left: 200%;
+}
+#switch4:checked ~ #slides .image {
+    margin-left: 300%;
+}
+#switch5:checked ~ #slides .image {
+    margin-left: 400%;
+}
+#controls {
+    margin: -25% 0 0 0;
+    width: 100%;
+    height: 50px;
+}
+#active label {
+    border-radius: 10px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #bbb;
+}
+#active {
+    margin: 23% 0 0;
+    text-align: center;
+}
+#active label:hover {
+    background-color: aquamarine;
+    border-color: blue !important;
+}
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4),
+#switch5:checked ~ #active label:nth-child(5) {
+    background-color: cadetblue;
+    border-color: blueviolet !important;
+}
+#slides .image {
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+#controls label:hover {
+    opacity: 0.6;
+}
+#controls label {
+    transition: opacity 0.2s ease-out;
 }
