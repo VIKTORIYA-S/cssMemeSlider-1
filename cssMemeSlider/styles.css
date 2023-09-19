@@ -104,6 +104,9 @@ body {
     background: rgb(2, 47, 131);
     border-radius: 50%;
   }
+  .dot:hover {
+
+  }
   #switch-1:checked ~ .slides__container .ribbon,
   #switch-1:checked ~ .block .title .controls {
     transform: translateX(0);
@@ -158,6 +161,8 @@ body {
         justify-content: center;
       }
   }
+
+
 
 
 
